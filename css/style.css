@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+:root {
+    --title-color: #333;
+    --body-color: #696969;
+    --bg-color: #eee;
+    --forbg-color: #fff;
+    --blend-mode: normal
+}
+
+.dark-theme {
+    --title-color: #c54c4c;
+    --body-color: #fff;
+    --bg-color: #181621;
+    --forbg-color: #211f28;
+    --blend-mode: lighten;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    color: var(--body-color);
+    transition: background-color 1s, color 1s;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0;
+}
+
+.toggle-btn {
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    border: 2px solid var(--bg-color);
+    display: flex;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.toggle-btn i {
+    margin: auto;
+    font-size: 2rem;
+}
+
+.container {
+    width: 80%;
+    height: 80vh;
+    max-width: 120rem;
+    padding: 0 1.5rem;
+    margin: 0 auto;
+}
+
+.content {
+    display: flex;
+    background-color: var(--forbg-color);
+    box-shadow: .4rem .4rem 1rem rgba(0, 0, 0, 0.04);
+    transition: background-color 1s;
+}
+
+.content-img {
+    flex: 1
+}
+
+.content-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: var(--blend-mode);
+}
+
+.content-text {
+    flex: 1;
+    padding: 5rem;
+}
+
+.title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4rem;
+    color: var(--title-color);
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 0.4rem;
+    margin-bottom: 20px;
+    margin-right: 150px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    color: var(--body-color);
+}
+
+.desc1 {
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    border: 2px solid var(--body-color);
+    color: var(--body-color);
+    padding: 1rem 2.5rem;
+    margin-top: 2.5rem;
+}
